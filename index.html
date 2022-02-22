@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" class="en" placeholder="Text to Encode">
+    <button onclick="encode($('input.en').val())">Encode</button>
+
+    <input type="text" class="de" placeholder="Encoded string">
+    <button onclick="decode($('input.de').val())">Decode</button>
+
+    <script src="obfuscate.js"></script>
+    <script src="deobfuscate.js"></script>
+</body>
+
+</html>
