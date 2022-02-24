@@ -11,7 +11,7 @@ function encode(str) {
         var ind = chars.indexOf(str[i]);
         if (ud == "u") newInd = ind + shift
         else if (ud == "d") newInd = ind - shift;
-        if (newInd > chars.length) {
+        if (newInd > chars.length - 1) {
             newInd = newInd - chars.length;
         } else if (newInd < 0) {
             newInd = chars.length + newInd;
@@ -22,6 +22,7 @@ function encode(str) {
         final += chars[j];
     }
     console.log(final);
+    navigator.clipboard.writeText(final);
 }
 function shuffle(array) {
     let currentIndex = array.length, randomIndex;
@@ -33,8 +34,7 @@ function shuffle(array) {
     return array;
 }
 
-var array = ["Isaac", "Steph"];
-var result = [];
+
 
 function arrencode(str) {
     for (var e = 0; e < str.length; e++) {
@@ -62,4 +62,4 @@ function arrencode(str) {
         navigator.clipboard.writeText(final);
     }
 }
-arrencode(array);
+// arrencode(array);

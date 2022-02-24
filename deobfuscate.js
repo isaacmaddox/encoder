@@ -1,5 +1,3 @@
-var array = [];
-
 function decode(str) {
     var de = str.split("");
     var shift = parseInt(str[0]);

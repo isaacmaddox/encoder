@@ -7,15 +7,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+        div {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        * {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 400;
+            font-size: 1.125rem;
+            border-radius: 5px;
+        }
+
+        input {
+            width: 35vw;
+            border: none;
+            background: #eee;
+            padding-inline: 2rem;
+            box-sizing: border-box;
+            outline: none;
+            transition: box-shadow 0.2s ease, background 0.2s ease;
+            padding-block: 1rem;
+            min-width: fit-content;
+            margin-block: 1rem;
+
+        }
+
+        input:focus {
+            box-shadow: 0px 0px 10px 1px #20add8;
+            background: #fff;
+        }
+
+        button {
+            padding-inline: 2rem;
+            padding-block: 1rem;
+            border: none;
+            background: #2c67e3;
+            color: #fff;
+            width: 10vw;
+            cursor: pointer;
+            min-width: fit-content;
+
+        }
+
+        button:hover {
+            filter: brightness(95%);
+        }
+    </style>
 </head>
 
 <body>
-    <input type="text" class="en" placeholder="Text to Encode">
-    <button onclick="encode($('input.en').val())">Encode</button>
+    <div>
+        <input type="text" class="en" placeholder="Text to Encode">
+        <button onclick="encode($('input.en').val())">Encode</button>
 
-    <input type="text" class="de" placeholder="Encoded string">
-    <button onclick="decode($('input.de').val())">Decode</button>
-
+        <input type="text" class="de" placeholder="Encoded string">
+        <button onclick="decode($('input.de').val())">Decode</button>
+    </div>
     <script src="obfuscate.js"></script>
     <script src="deobfuscate.js"></script>
 </body>
