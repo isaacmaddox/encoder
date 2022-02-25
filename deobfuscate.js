@@ -18,4 +18,5 @@ function decode(str) {
         final += ascii[newInd];
     }
     console.log(final);
+    alert(final);
 }
